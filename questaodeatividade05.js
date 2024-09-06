@@ -1,4 +1,4 @@
-let url_final =`https://worldcupjson.net/matches`
+const url_final =`https://worldcupjson.net/matches`
 fetch(url_final)
 .then(response => response.json())
 .then(finais => exibir_final(finais));
