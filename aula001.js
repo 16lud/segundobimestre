@@ -15,12 +15,17 @@ fetch(url)
  });
  
  function exibir_horarios() {
-    const timezone = document.getElementById('timezone').value;
+    const timezone = document.getElementById('timezones').value;
     const urltimezone = `https://worldtimeapi.org/api/timezone/${timezone}`
 
     fetch(urltimezone)
        .then(response => response.json())
        .then(hora => {
+         let horario = hora.datetime.split('T')[1].split('.')[0];
+         let data=hora.datetime.split('T')[0]
+         let div=document.createElement('div')
+         div.innerHTML=`${timezone} : ${horario} - ${data}`
+         resultado.appendChild(div)
         
        })
  }
