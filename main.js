@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var funcionario_1 = require("./funcionario");
+var desenvolvedor08_1 = require("./desenvolvedor08");
+var f1 = new funcionario_1.funcionario("Jorge", 2500);
+console.log(f1.nome);
+var devJunior = new desenvolvedor08_1.Desenvolvedor('Alice Costa', 3000, 'Junior');
+console.log("- ".concat(devJunior.nome, " # Sal\u00E1rio atual: R$ ").concat(devJunior.salario.toFixed(2)));
+devJunior.promover();
+var devPleno = new desenvolvedor08_1.Desenvolvedor('Bruno Souza', 5000, 'Pleno');
+console.log("- ".concat(devPleno.nome, " # Sal\u00E1rio atual: R$ ").concat(devPleno.salario.toFixed(2)));
+devPleno.promover();
+var devSenior = new desenvolvedor08_1.Desenvolvedor('Joana Teles', 8000, 'Senior');
+console.log("- ".concat(devSenior.nome, " # Sal\u00E1rio atual: R$").concat(devSenior.salario.toFixed(2)));
+devSenior.promover();
